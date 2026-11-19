@@ -55,6 +55,8 @@ def ev(b,w):
  s=0
  for i,p_ in enumerate(b):
   if p_:s+=(V[abs(p_)]+p(p_,i))*(1if p_>0else-1)
+ K=b.index(6 if w else-6)
+ if K<8 and w or K>=56 and not w: s+=50
  return s if w else-s
 def o(mv,b,t,k1,k2):
  def s_(mv):
